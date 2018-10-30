@@ -58,6 +58,7 @@ public class CreatingMusic {
 			return(temp + temp/2);
 		}
 	}
+	
 	public static void addNote(String note,
                                boolean advance,
                                boolean treble) {
