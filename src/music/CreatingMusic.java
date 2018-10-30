@@ -1,4 +1,6 @@
 package music;
+import static music.CreatingMusic.track;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,7 +60,25 @@ public class CreatingMusic {
 	}
 
 	public static void play() {
-	
+		try {
+			Sequencer player = MidiSystem.getSequencer();
+			
+			player.open();
+			
+			player.setTempoInBPM(120);
+			
+			Sequence sequence = new Sequence(Sequence.PPQ,4);
+			
+			track = sequence.createTrack();
+			
+
+			player.setSequence(sequence);
+			
+			player.start();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
 	}
 
 
