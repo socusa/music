@@ -58,6 +58,21 @@ public class CreatingMusic {
 			return(temp + temp/2);
 		}
 	}
+	public static void addNote(String note,
+                               boolean advance,
+                               boolean treble) {
+       String[] tokens = note.split("\\d");
+
+       String noteName = tokens[0];
+       String duration = tokens[1];
+       int octave = Integer.parseInt(note.substring(noteName.length(),noteName.length()+1));
+       
+	}
+	
+	public static void addRest(String duration,
+                               boolean treble) {
+
+	}
 
 	public static void play() {
 		try {
@@ -87,9 +102,9 @@ public class CreatingMusic {
 		
 		play();
 		
-		CreatingMusic creatingMusic = new CreatingMusic();
+//		CreatingMusic creatingMusic = new CreatingMusic();
 		
-		Util.jingleBells(creatingMusic);
+//		Util.jingleBells(creatingMusic);
 
 	}
 }
